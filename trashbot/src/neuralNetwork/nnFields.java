@@ -15,7 +15,7 @@ public class nnFields {
 	public static int totalIteration = 3;
 	
 	//mating
-	public static int reproductionMode = 1; //1 = reproduce best two; 2 = clone successful ones and mutate asexually, then randomly select from winners and reproduce asexually; 3 = RouletteWheel;
+	public static int reproductionMode = 1; //1 = reproduce the best two; 2 = clone successful ones and mutate asexually, then randomly select from winners and reproduce asexually; 3 = RouletteWheel;
 	public float chanceOfPickingFirst = 0.5f;
 	public float mutationRate = 0.1f;
 }
