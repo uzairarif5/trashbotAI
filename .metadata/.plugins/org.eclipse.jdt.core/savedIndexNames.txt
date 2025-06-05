@@ -1,0 +1,3 @@
+INDEX VERSION 1.131+C:\JavaW3\trashbotAI\.metadata\.plugins\org.eclipse.jdt.core
+1553251499.index
+117774581.index

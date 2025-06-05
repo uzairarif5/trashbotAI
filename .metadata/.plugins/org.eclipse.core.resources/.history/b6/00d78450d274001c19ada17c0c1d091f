@@ -1,0 +1,22 @@
+package neuralNetwork;
+
+public class nnFields {
+	public static int numOfNearestTrash = 10;
+	public static int properties = 5;	//properties for each trash [relative x] [relative y] [moveX] [moveY] [Size]
+	public int interSize = 30;	//interLayer size
+	public int interSize2 = 20;	//interLayer2 size
+	public int finalOuts = 5;	//outcome for shooter horizontalD, verticalD, shoot, shootX, shootY
+	public float[][] link12;
+	public float[][] link23;
+	public float[][] link34;
+	public float[] baises2;
+	public float[] baises3;
+	public float[] baises4;
+	public static int numOfShooters = 50; //always more than 20
+	public static int totalIteration = 2;
+	
+	//mating
+	public static boolean cloningMode = false;
+	public float chanceOfPickingFirst = 0.5f;
+	public float mutationRate = 0.015f;
+}
