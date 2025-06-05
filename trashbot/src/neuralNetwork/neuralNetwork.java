@@ -8,11 +8,11 @@ public class neuralNetwork extends nnFields{
 	public neuralNetwork(int index) {
 		int i = index + 1;
 		try {
-			this.link12 = readLinks("shooter".concat(Integer.toString(i)).concat("/link12"));
-			this.link23 = readLinks("shooter".concat(Integer.toString(i)).concat("/link23"));
-			this.biases2 = readBiases("shooter".concat(Integer.toString(i)).concat("/baises2"));
-			this.biases3 = readBiases("shooter".concat(Integer.toString(i)).concat("/baises3"));
-			this.plinks = readBiases("shooter".concat(Integer.toString(i)).concat("/plinks"));
+			this.link12 = readLinks("shooterData/shooter".concat(Integer.toString(i)).concat("/link12"));
+			this.link23 = readLinks("shooterData/shooter".concat(Integer.toString(i)).concat("/link23"));
+			this.biases2 = readBiases("shooterData/shooter".concat(Integer.toString(i)).concat("/biases2"));
+			this.biases3 = readBiases("shooterData/shooter".concat(Integer.toString(i)).concat("/biases3"));
+			this.plinks = readBiases("shooterData/shooter".concat(Integer.toString(i)).concat("/plinks"));
 		} catch (Exception e) {
 			e.printStackTrace();
 		}

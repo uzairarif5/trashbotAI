@@ -10,7 +10,6 @@ public class gameCode {
 	public static boolean cornerSpawn = true;
 	public static int tickInterval = 5;
 	public static boolean sameTrashes = true;
-	public static int focusIndex2 = 0;
 	public static Stack<trash> globalTrash;
 	
 	public int[] setStartingPosition(int[] startingPos,shooter thisShooter) {

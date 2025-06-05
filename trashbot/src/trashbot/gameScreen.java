@@ -439,9 +439,7 @@ public class gameScreen extends JPanel{
           b.draw(g);
         }
       }
-      catch(Exception e) {
-	      e.printStackTrace();
-			}
+      catch(Exception e) {}
   }
 
 }

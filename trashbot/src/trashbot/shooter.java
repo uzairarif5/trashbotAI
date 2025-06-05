@@ -122,8 +122,6 @@ public class shooter {
 				this.inputForBrain[i+3] = 0;
 			}
 		}
-		// this.inputForBrain[nnFields.numOfNearestTrash*nnFields.properties] = this.getX();
-		// this.inputForBrain[(nnFields.numOfNearestTrash*nnFields.properties)+1] = this.getY();
 		double inputPx = (2*(this.posx-20)/(gameScreen.gameDim.getWidth()-40))-1;
 		double inputPy = (2*(this.posy-20)/(gameScreen.gameDim.getHeight()-40))-1;
 		float[] out = this.shooterBrain.Propagate(this.inputForBrain, inputPx, inputPy);
