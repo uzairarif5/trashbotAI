@@ -25,11 +25,11 @@ public class homeScreen{
 		title.setPreferredSize(new Dimension(300,150));
 		title.setBorder(BorderFactory.createLineBorder(Color.black, 2));  
 		gbc.gridx = 0;  
-	    gbc.gridy = 0;
-	    gbc.gridwidth = 2;
-	    gbc.weightx = 1;
-	    gbc.weighty = 0.5;
-	    gbc.insets = new Insets(0,0,0,0);
+    gbc.gridy = 0;
+    gbc.gridwidth = 2;
+    gbc.weightx = 1;
+    gbc.weighty = 0.5;
+    gbc.insets = new Insets(0,0,0,0);
 		panelObj.add(title,gbc);
 		
 		//Self Play
@@ -39,11 +39,11 @@ public class homeScreen{
 		btn1.setPreferredSize(new Dimension(100,30));
 		btn1.setBorder(BorderFactory.createLineBorder(Color.black,2));
 		gbc.gridx = 0;  
-	    gbc.gridy = 1;
+		gbc.gridy = 1;
 		gbc.gridwidth = 1;
-	    gbc.weightx = 0.5;
-	    gbc.weighty = 0.5;
-	    gbc.insets = new Insets(0,0,0,0);
+		gbc.weightx = 0.5;
+		gbc.weighty = 0.5;
+		gbc.insets = new Insets(0,0,0,0);
 		panelObj.add(btn1,gbc);
 		btn1.addActionListener(e -> {
 			homeScreen.cl.show(homeScreen.homeFrame.getContentPane(),"gs");
@@ -59,11 +59,11 @@ public class homeScreen{
 		btn2.setPreferredSize(new Dimension(100,30));
 		btn2.setBorder(BorderFactory.createLineBorder(Color.black,2));
 		gbc.gridx = 1;  
-	    gbc.gridy = 1;
+		gbc.gridy = 1;
 		gbc.gridwidth = 1;
-	    gbc.weightx = 0.5;
-	    gbc.weighty = 0.5;
-	    gbc.insets = new Insets(0,0,0,0);
+    gbc.weightx = 0.5;
+    gbc.weighty = 0.5;
+    gbc.insets = new Insets(0,0,0,0);
 		panelObj.add(btn2,gbc);
 		btn2.addActionListener(e -> {
 			homeScreen.cl.show(homeScreen.homeFrame.getContentPane(),"gs");

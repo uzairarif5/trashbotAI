@@ -4,7 +4,6 @@ public class nnFields {
 	public static int numOfNearestTrash = 6;
 	public static int properties = 5;	//properties for each trash [size] [relative x] [relative y] [moveX] [moveY]
 	public int interSize = 30;	//interLayer size
-	public int interSize2 = 20;	//interLayer2 size
 	public int finalOuts = 5;	//outcome for shooter horizontalD, verticalD, shoot, shootX, shootY
 	public float[][] link12;
 	public float[][] link23;

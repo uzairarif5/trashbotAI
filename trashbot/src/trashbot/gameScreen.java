@@ -198,7 +198,7 @@ public class gameScreen extends JPanel{
 		scoreComparator scoreC = new scoreComparator();
 		PriorityQueue<shooter> orderedShooters = new PriorityQueue<>(scoreC);
 		int successSize = nnFields.numOfShooters/3;
-		int[] succesIndices = new int[successSize];
+		int[] successIndices = new int[successSize];
 		int[] failIndices = new int[nnFields.numOfShooters-successSize];
 		int[] orderedIndices = new int[nnFields.numOfShooters];
 		i = 0;
@@ -233,14 +233,14 @@ public class gameScreen extends JPanel{
 			System.out.printf(" %7.1f|", this.scores[failIndices[i]]);
 		}
 		System.out.print("\nShooters:");
-		for(i = 0;  i< succesIndices.length;i++) {
-			succesIndices[i] = gameScreen.allShooters.indexOf(orderedShooters.poll());
-			orderedIndices[i+failIndices.length] = succesIndices[i];
-			System.out.printf("%8d|", succesIndices[i]+1);
+		for(i = 0;  i< successIndices.length;i++) {
+			successIndices[i] = gameScreen.allShooters.indexOf(orderedShooters.poll());
+			orderedIndices[i+failIndices.length] = successIndices[i];
+			System.out.printf("%8d|", successIndices[i]+1);
 		}
 		System.out.print("\npScores: ");
-		for(i = 0;  i< succesIndices.length;i++) {
-			System.out.printf(" %7.1f|",this.scores[succesIndices[i]]);
+		for(i = 0;  i< successIndices.length;i++) {
+			System.out.printf(" %7.1f|",this.scores[successIndices[i]]);
 		}
 		System.out.println('\n');
 		if(this.iteration == nnFields.totalIteration) {
@@ -250,19 +250,19 @@ public class gameScreen extends JPanel{
 					int[] var2;
 				    @Override
 				    public void run() {
-						try {
-							reproduce.cloneAndMutate(this.var1,this.var2);
-					    	gameScreen.getIns().newGen();
-						} catch (Exception e) {
-							e.printStackTrace();
-						}
+							try {
+								reproduce.cloneAndMutate(this.var1, this.var2);
+								gameScreen.getIns().newGen();
+							} catch (Exception e) {
+								e.printStackTrace();
+							}
 				    }
 				    public TimerTask para(int[] x1, int[] x2) {
 				    	this.var1= x1;
 				    	this.var2 = x2;
 				    	return this;
 				    }
-				}).para(succesIndices, failIndices),1000);
+				}).para(successIndices, failIndices),1000);
 			}
 			else if(nnFields.reproductionMode == 1){
 				new Timer().schedule((new java.util.TimerTask() {
@@ -278,7 +278,7 @@ public class gameScreen extends JPanel{
 				    	this.var2 = x2;
 				    	return this;
 				    }
-				}).para(succesIndices[succesIndices.length-1], succesIndices[succesIndices.length-2]),1000);
+				}).para(successIndices[successIndices.length-1], successIndices[successIndices.length-2]),1000);
 			}
 			else if(nnFields.reproductionMode == 3) {
 				new Timer().schedule((new java.util.TimerTask() {
